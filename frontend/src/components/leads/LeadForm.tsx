@@ -23,11 +23,11 @@ export function LeadForm({ onSuccess, onClose, existing }: Props) {
     source: existing?.source ?? 'Website',
     notes: existing?.notes ?? '',
   });
-  const [errors, setErrors] = useState<Partial<LeadFormData>>({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
 
   const validate = (): boolean => {
-    const e: Partial<LeadFormData> = {};
+    const e: Record<string, string> = {};
     if (!form.name.trim() || form.name.length < 2) e.name = 'Name must be at least 2 characters';
     if (!form.email.match(/^\S+@\S+\.\S+$/)) e.email = 'Enter a valid email address';
     if (!form.source) e.source = 'Please select a source';
@@ -58,7 +58,13 @@ export function LeadForm({ onSuccess, onClose, existing }: Props) {
 
   const field = (key: keyof LeadFormData, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
-    if (errors[key]) setErrors((prev) => ({ ...prev, [key]: undefined }));
+    if (errors[key]) {
+    setErrors((prev) => {
+    const updated = { ...prev };
+    delete updated[key];
+    return updated;
+   });
+ }
   };
 
   return (
