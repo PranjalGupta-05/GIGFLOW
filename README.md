@@ -70,9 +70,9 @@ A full-stack Lead Management Dashboard built with the MERN stack + TypeScript.
 
 ## Live Demo
 
-Frontend: [Live Frontend URL](https://your-frontend.vercel.app)
+Frontend: https://gigflow-git-main-pranjal-gupta-s-projects.vercel.app
 
-Backend API: [Live Backend URL](https://your-backend.onrender.com)
+Backend API: https://gigflow-backend-1voy.onrender.com
 
 ## Quick Start
 
@@ -82,8 +82,8 @@ Backend API: [Live Backend URL](https://your-backend.onrender.com)
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/gigflow.git
-cd gigflow
+git clone https://github.com/PranjalGupta-05/GIGFLOW.git
+cd GIGFLOW
 ```
 
 ### 2. Backend setup
@@ -236,8 +236,8 @@ VITE_API_URL=http://localhost:5000/api
 
 Pranjal Gupta
 
-- GitHub: https://github.com/YOUR_USERNAME
-- LinkedIn: https://linkedin.com/in/YOUR_LINKEDIN
+- GitHub: https://github.com/PranjalGupta-05
+- LinkedIn: www.linkedin.com/in/pranjal-gupta-55b667327
 
 ## License
 
